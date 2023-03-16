@@ -1,0 +1,67 @@
+<div class="container-fluid p-5 mb-8">
+
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <form class="shadow p-3 mb-5 bg-white rounded" [formGroup]="regForm"
+                (ngSubmit)="onRegFormSubmit(regFormDir)" #regFormDir="ngForm">
+
+                <div class="mb-3">
+                    <h4>Create Account</h4>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="firstname" type="text" formControlName="firstname"
+                        placeholder="Enter firstname">
+                    <label for="firstname">Firstname</label>
+                    <div
+                        *ngIf="regForm.controls['firstname'].hasError('min1') && !regForm.controls['firstname'].hasError('required1')">
+                        Minimum 2 character required
+                    </div>
+                    <div *ngIf="regForm.controls['firstname'].hasError('required1')">
+                        Firstname is <strong>required</strong>
+                    </div>
+                </div>
+
+                <!-- Lastname -->
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="lastname" type="text" formControlName="lastname"
+                        placeholder="Enter lastname">
+                    <label for="lastname">Lastname</label>
+                </div>
+
+                <!-- Username -->
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="reg-username" type="text" formControlName="username"
+                        placeholder="Enter username">
+                    <label for="reg-username">Username</label>
+                    <div *ngIf="regForm.controls['username'].hasError('required1')">
+                        Username is <strong>required</strong>
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="reg-password" type="password" formControlName="password"
+                        placeholder="Enter password">
+                    <label for="reg-password">Password</label>
+                    <div *ngIf="regForm.controls['password'].hasError('required1')">
+                        Password is <strong>required</strong>
+                    </div>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-lg btn-primary btn-block">Sign Up</button>
+                    </div>
+                    <p class="d-flex justify-content-center">Already have an account? &nbsp;
+                        <a routerLink="/login">Login Here</a>
+                    </p>
+                </div>
+                <!-- </div>
+                    </div> -->
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+
+</div>

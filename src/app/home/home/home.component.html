@@ -1,0 +1,32 @@
+
+<div class="container mt-3 p-3">
+    <div class="row">
+        <div class="col-4" *ngFor="let product of items">
+            <div class="shadow p-2">
+                <div class="">
+                    <img src="assets/images/{{product.image}}" width="200px" height="200px">
+                </div>
+                <div class="pt-4">
+                    <div class="text-truncate">{{product.name}}</div>
+                    <div>{{product.brand}}</div>
+                    <div><b>{{product.price | currency: 'INR' : 'symbol' : '1.0-0'}}</b></div>
+                    <div>Unit available: {{product.unitAvailable}}</div>
+                </div>
+                <div class="pt-2">
+                    
+                    <div *ngIf="product.unitAvailable > 0; else notAvailableBlock">
+                        <div *ngIf="productsInCart.indexOf(product.id) > -1">
+                            <button class="btn btn-primary" routerLink="cart">Go to cart</button>
+                        </div>
+                        <div *ngIf="productsInCart.indexOf(product.id) == -1">
+                            <button class="btn btn-primary" (click)="addToCart(product.id)">Add to cart</button>
+                        </div>
+                    </div>
+                    <ng-template #notAvailableBlock>
+                        <div class="p-2 bg-secondary text-white">Out of stock</div>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

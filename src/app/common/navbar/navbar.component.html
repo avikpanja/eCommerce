@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-sm navabr-dark bg-dark">
+    <a href="#" class="navbar-brand"><h3>{{companyName}}</h3></a>
+   
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a routerLink="home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="home/cart" class="nav-link">Cart
+                    <span *ngIf="uniqueProductIdArray.length>0">
+                        ({{uniqueProductIdArray.length}})
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="home/order-history" class="nav-link">Order History</a>
+            </li>
+        </ul>
+        
+          <!-- <span class="text-light"> <i>Welcome</i> {{userContext.firstname}} {{userContext.lastname}}</span>
+          &nbsp; <span class="text-light" style="font-size: 30px;"> | </span> &nbsp;&nbsp;&nbsp;
+        <button class="btn btn-outline-success btn-sm" type="submit" (click)="logOut()">
+            Log out
+        </button> -->
+    </div>
+    
+</nav>

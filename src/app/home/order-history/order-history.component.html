@@ -1,0 +1,36 @@
+<div class="container shadow mt-3 p-3">
+    <div *ngIf="orderHistory.orderedItems.length>0; else notAvailableBlock">
+
+        <div *ngFor="let item of orderHistory.orderedItems">
+            <div class="card shadow" style="height: 8rem">
+                <div class="col-2">
+                    <img src="assets/images/{{item.productImage}}" style="width: 90%;height: 100%;">
+                </div>
+                <div class="col-5">
+                    <div class="card-body">
+                        <div>{{item.productName}}</div>
+                        <div>Qty: {{item.orderedUnit}}</div>
+                        <div>Color: {{item.productColor}}</div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card-body">
+                        <div>{{item.totalPrice | currency: 'INR' : 'symbol' : '1.0-0'}}</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card-body">
+                        <div>Ordered on {{item.orderDateTime | date:"MMM d, y"}}</div>
+                    </div>
+                </div>
+            </div>
+            <p></p>
+        </div>
+
+    </div>
+
+    <ng-template #notAvailableBlock>
+        <br />
+        <div class="d-flex justify-content-center">You haven't order anything yet!</div>
+    </ng-template>
+</div>

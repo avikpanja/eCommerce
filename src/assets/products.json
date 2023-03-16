@@ -1,0 +1,47 @@
+[
+	{
+		"id": 1,
+		"name": "GEL-CONTEND 4B Running Shoes For Men",
+		"catagory": "Shoes",
+		"brand": "asics",
+		"color": "Blue",
+		"price": 1569,
+		"unitAvailable": 2,
+		"unitAllowedPerUser": 2,
+		"image": "1-shoe-asics-running-blue-GEL-CONTEND 4B Running Shoes For Men.jpg"
+	},
+	{
+		"id": 2,
+		"name": "ULTRA GROOVE - TEMPLAR Running Shoes For Men",
+		"catagory": "Shoes",
+		"brand": "Skechers",
+		"color": "Yellow",
+		"price": 2664,
+		"unitAvailable": 64,
+		"unitAllowedPerUser": 2,
+		"image": "2-ULTRA GROOVE - TEMPLAR Running Shoes For Men.jpg"
+	},
+	{
+		"id": 3,
+		"name": "5740 - TWIN CITY Running Shoes For Men",
+		"catagory": "Shoes",
+		"brand": "New Balance",
+		"color": "Multicolor",	
+		"price": 5170,
+		"unitAvailable": 40,
+		"unitAllowedPerUser": 2,
+		"image": "3-5740 - TWIN CITY Running Shoes For Men.jpg"
+	},
+	{
+		"id": 4,
+		"name": "AIR ZOOM PEGASUS FLYEASE Running Shoes For Men",
+		"catagory": "Shoes",
+		"brand": "New Balance",
+		"color": "Blue",
+		"price": 7346,
+		"unitAvailable": 37,
+		"unitAllowedPerUser": 2,
+		"image": "4-AIR ZOOM PEGASUS FLYEASE Running Shoes For Men.jpg"
+	}
+
+]
